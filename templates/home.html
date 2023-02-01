@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{name}}</title>
+</head>
+<body>
+<h style="font-size: 40px">Hello {{ name }}! It's your ciphered communicator.</h><br><br>
+<form action=''  method="post">
+    <label for="textbox" >Message: </label>
+    <input type="text" id = "textbox" size="50" name="plaintext" placeholder="Write your message here">
+    <button type="submit">Send message</button>
+</form><br>
+
+<form action=''  method="post" >
+    <label for="image" >File: </label>
+    <input type='file' name='image' id="image">
+    <button type='submit'> Send file</button>
+</form><br>
+
+<div>
+    <!-- passing name variable to next website, couldn't find the better way to do so -->
+    {% if name == "Alice" %}
+        <a href={{url_for('getmsg', name=  "Alice"   )}}>Inbox</a>
+    {% else %}
+        <a href={{url_for('getmsg', name=  "Bob"   )}}>Inbox</a>
+    {% endif %}
+</div>
+</body>
+</html>

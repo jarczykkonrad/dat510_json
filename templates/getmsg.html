@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ name }}</title>
+</head>
+<body>
+<h style="font-size: 40px">{{ name }} Recent messages.</h><br><br>
+<div>
+    <p>
+        {{ plaintext }}
+    </p>
+</div>
+<div>
+    <button onclick="goBack()">Go Back</button>
+</div>
+</body>
+</html>
