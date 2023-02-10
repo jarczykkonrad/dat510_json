@@ -3,11 +3,9 @@ import Ass2_part1
 from shared_memory_dict import SharedMemoryDict
 from localStoragePy import localStoragePy
 from flask import Flask, render_template, redirect, url_for, request
-import Ass2_part1
 from requests import put, get
 app= Flask(__name__)
 
-# keeping private key on localStorage for simulation / in real application could be cache memory, cookie, session
 localStorage = localStoragePy('Alice/Bob', 'json')
 
 # shared message, for both Alice and Bob keeping only last message
